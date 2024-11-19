@@ -1,0 +1,73 @@
+.head{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(4,7,30,0.7),rgba(4,7,30,0.7)),url(https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.name h1{
+    text-align: center;
+    color: rgb(253, 183, 5);
+    width: 50%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    right: 50%;
+    text-align: center;
+    transform: translate(-47%,-60%);
+}
+.back img{
+width: 15%;
+color: white;
+position: absolute;
+top: 20%;
+left: 50%;
+right: 40%;
+text-align: center;
+transform: translate(-50%,-50%);
+}
+
+div p{
+width: 90%;
+color: white;
+position: absolute;
+top: 40%;
+left: 50%;
+right: 40%;
+font-size: large;
+text-align: center;
+transform: translate(-50%,-50%);
+}
+
+div a{
+width: 20%;
+color: white;
+position: absolute;
+top: 80%;
+left: 50%;
+right: 40%;
+text-align: center;
+transform: translate(-50%,-50%);
+}
+.loc img{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    right: 40%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    }
+ .loc h1{
+    text-align: center;
+    color: rgb(240, 16, 16);
+    width: 20%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    right: 40%;
+    text-align: center;
+    transform: translate(-80%,-50%);
+    }

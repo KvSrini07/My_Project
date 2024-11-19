@@ -1,0 +1,26 @@
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(4,7,30,0.7),rgba(4,7,30,0.7)),url(https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+ul.nav1{
+    text-align: center;
+
+}
+ul.nav1 li{
+    list-style: none;
+    display:inline-block;
+    margin:2px;
+    width:120px;
+    padding:20px;
+    background:#dc1b62;
+}
+ul.nav1 li a{
+    font-size: 20px;
+    text-decoration: none;
+    padding:10px;
+    margin:5px;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reg Form</title>
+    <style type="text/css">
+        body{
+            font-family: Calibri;
+
+        }
+        input[type="text"], [type="textarea"], [type="number"]{
+            width: 250px;
+            padding: 12px 20px;
+            border: 2px solid red;
+            border-radius: 4px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            width: 100px;
+            height: 35px;
+            position: relative;left: 180px;
+            text-align: center;
+            background-color: black; /* Green */
+	    cursor: pointer;
+	    
+            color:white;
+            font-size: 16px;
+}
+
+
+       .box {
+	    width: 290px;
+            padding: 12px 20px;
+            border: 2px solid red;
+            border-radius: 4px;
+      }
+        form{
+            text-align: center;
+            font-family: Calibri;
+            font-size: 20px;
+            border: 3px solid black;
+            width: 600px;
+            margin: 20px auto;
+            background-image: linear-gradient(#66a3ff, #1aff1a);
+        }
+        td {
+            padding: 10px;
+        }
+        td:first-child {
+            text-align: right;
+            font-weight: bold;
+        }
+        td:last-child {
+            text-align: left;
+}
+
+
+    </style>
+    <script>
+        function validate() {
+            var fname = document.reg_form.fname;
+            var lname = document.reg_form.lname;
+            var address = document.reg_form.address;
+            var gender = document.reg_form.gender;
+            var email = document.reg_form.email;
+            var mobile = document.reg_form.mobile;
+            var course = document.reg_form.course;
+
+            if (fname.value.length <= 0) {
+                alert("Name is required");
+                fname.focus();
+                return false;
+            }
+            if (lname.value.length <= 0) {
+                alert("Last Name is required");
+                lname.focus();
+                return false;
+            }
+            if (address.value.length <= 0) {
+                alert("Address is required");
+                address.focus();
+                return false;
+            }
+            if (gender.value.length <= 0) {
+                alert("Gender is required");
+                gender.focus();
+                return false;
+            }
+            if (email.value.length <= 0) {
+                alert("Email Id is required");
+                email.focus();
+                return false;
+            }
+            if (mobile.value.length <= 0) {
+                alert("Mobile number is required");
+                mobile.focus();
+                return false;
+            }
+            if (course.value == "select course") {
+                alert("Course is required");
+                course.focus();
+                return false;
+            }
+            else{
+                alert("Data Validated Successfully!");
+            }
+            return false;
+        }
+        var list1=[];
+        var list2=[];
+        var list3=[];
+        var list4=[];
+        var list5=[];
+        var list6=[];
+        var list7=[];
+
+        var n = 1;
+        var x = 0;
+
+        function AddRow(){
+            var AddRown = document.getElementById('data');
+            var NewRow = AddRown.insertRow(n);
+
+            list1[x]=document.getElementById("fname").value;
+            list1[x]=document.getElementById("lname").value;
+            list1[x]=document.getElementById("address").value;
+            list1[x]=document.getElementById("gender").value;
+            list1[x]=document.getElementById("emailid").value;
+            list1[x]=document.getElementById("mobilenumber").value;
+            list1[x]=document.getElementById("course").value;
+
+            var cel1 = NewRow.insertCell(0);
+            var cel1 = NewRow.insertCell(1);
+            var cel1 = NewRow.insertCell(2);
+            var cel1 = NewRow.insertCell(3);
+            var cel1 = NewRow.insertCell(4);
+            var cel1 = NewRow.insertCell(5);
+            var cel1 = NewRow.insertCell(6);
+
+
+            cel1.innerHTML = list1[x];
+            cel2.innerHTML = list2[x];
+            cel3.innerHTML = list3[x];
+            cel4.innerHTML = list4[x];
+            cel5.innerHTML = list5[x];
+            cel6.innerHTML = list6[x];
+            cel7.innerHTML = list7[x];
+
+            n++;
+            x++;
+            
+
+        }
+        
+    </script>
+</head>
+<body>
+    <center><h1>Form Validation- [HTML,CSS,JAVASCRIPT]</h1></center>
+    <hr>
+    <form method="" action="" name="reg_form" onsubmit="return validate()">
+        <h2>Registration Form</h2>
+        <table>
+            <tr>
+                <td><label>First Name: </label></td>
+
+
+                <td>
+                    <input type="text" name="fname" placeholder="First Name">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Last Name: </label></td>
+                <td>
+                    <input type="text" name="lname" placeholder="Last Name">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Address: </label></td>
+                <td>
+                    <input type="textarea" size="32" name="address" placeholder="Address">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Gender: </label></td>
+                <td>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                </td>
+            </tr>
+            <tr>
+                <td><label>Email Id: </label></td>
+                <td>
+                    <input type="text" name="email" placeholder="example@gmail.com">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Mobile: </label></td>
+                <td>
+                    <input type="number" name="mobile"placeholder="000000000">
+                </td>
+            </tr>
+            <tr>
+            <td><label>Course: </label></td>
+                <td>
+                    
+                    <select name="course" class="box">
+                        <option value="select course">select course</option>
+                        <option value="MCA">MCA-A</option>
+                        <option value="MBA">MCA-B</option>
+                        <option value="MBA">MCA-C</option>
+                       
+                    </select>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="submit" onclick="myFunction()" value="Submit">
+                    <input type="reset" name="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+        <table border="4" id="data">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>Gender</th>
+                    <th>Email Id</th>
+                    <th>Mobile Number</th>
+                    <th>Course</th>
+                </tr>
+         </thead>
+        </table>
+    
+</body>
+</html>
